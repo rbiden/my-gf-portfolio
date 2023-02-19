@@ -29,6 +29,7 @@
 
 main {
     @include flex(column, center, center);
+    padding-bottom: 4em;
 
     .wrapper {
         margin-top: 4rem;
