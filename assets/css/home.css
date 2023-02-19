@@ -8,6 +8,7 @@ body {
   background-color: #fbf4ea;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6, small {
@@ -119,83 +120,80 @@ input[type=search]:focus, input[type=text]:focus {
   background-color: #d4d7ef;
 }
 
-main {
+.header {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding-bottom: 4em;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
 }
-main .wrapper {
-  margin-top: 4rem;
-  text-align: center;
-}
-main .wrapper h6 {
+.header h6 {
   font-size: 0.9rem;
   font-weight: 400;
 }
-main .wrapper h1 {
+.header h1 {
   margin-top: 1rem;
   letter-spacing: -0.2rem;
   font-size: 4rem;
   font-weight: 400;
 }
-main .wrapper span {
+.header span {
   position: relative;
 }
-main .wrapper span i {
+.header span i {
   position: absolute;
   right: 6%;
   top: 48%;
 }
-main .wrapper span input {
+.header span input {
   width: 300px;
   color: #212529;
   background-color: transparent;
   padding: 1rem 1.5rem;
   border-radius: 5rem;
 }
-main .wrapper h5 {
+.header h5 {
   font-size: 1rem;
   color: #404243;
   letter-spacing: 0.05rem;
   margin-top: 1rem;
   font-weight: 300;
 }
-main .wrapper section {
+
+main {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  padding: 2rem 0 4rem 11rem;
   gap: 1.5rem;
-  margin-top: 6rem;
 }
-main .wrapper section article img {
-  border-radius: 5px;
+main img {
+  border-radius: 6px;
 }
-main .wrapper section .main-article {
+main .main-article {
   display: flex;
   align-items: start;
   justify-content: center;
   flex-direction: column;
   max-width: 100%;
-  background-color: rgb(246, 242, 242);
+  background-color: rgb(250, 249, 249);
   padding: 15px;
   border: solid 2px #212529;
   border-radius: 5px;
-  margin-left: 9%;
 }
-main .wrapper section .main-article div {
+main .main-article div {
   padding-left: 1rem;
 }
-main .wrapper section .main-article .article-header {
+main .main-article .article-header {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
   gap: 1rem;
 }
-main .wrapper section .main-article .article-header p {
+main .main-article .article-header p {
   text-align: center;
   padding: 5px 9px;
   color: #fffdf7;
@@ -203,16 +201,16 @@ main .wrapper section .main-article .article-header p {
   font-size: 10px;
   border-radius: 5rem;
 }
-main .wrapper section .main-article .article-header small {
+main .main-article .article-header small {
   font-size: 11px;
 }
-main .wrapper section .main-article .article-body {
+main .main-article .article-body {
   text-align: left;
 }
-main .wrapper section .main-article .article-body h2 {
+main .main-article .article-body h2 {
   max-width: 380px;
 }
-main .wrapper section .main-article .article-footer {
+main .main-article .article-footer {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -220,7 +218,7 @@ main .wrapper section .main-article .article-footer {
   margin-top: 1rem;
   margin-bottom: 0.5rem;
 }
-main .wrapper section .main-article .article-footer img {
+main .main-article .article-footer img {
   box-shadow: unset;
   border: solid 2px #212529;
   padding: 2px;
@@ -228,24 +226,26 @@ main .wrapper section .main-article .article-footer img {
      object-fit: fill;
   border-radius: 5rem;
 }
-main .wrapper section .main-article .article-footer div {
+main .main-article .article-footer div {
   text-align: left;
 }
-main .wrapper section .main-article .article-footer div p {
+main .main-article .article-footer div p {
   font-size: 14px;
   font-weight: 400;
   margin: 0;
 }
-main .wrapper section .main-article .article-footer div small {
+main .main-article .article-footer div small {
   font-size: 12px;
   color: #404243;
 }
-main .wrapper section .sub-wrapper {
+main section {
   display: flex;
+  align-items: center;
+  justify-content: start;
   flex-direction: column;
   gap: 1.5rem;
 }
-main .wrapper section .sub-wrapper .sub-article {
+main section .sub-article {
   display: flex;
   align-items: center;
   justify-content: start;
@@ -253,14 +253,14 @@ main .wrapper section .sub-wrapper .sub-article {
   position: relative;
   gap: 1rem;
 }
-main .wrapper section .sub-wrapper .sub-article .wrapper {
+main section .sub-article .wrapper {
   display: flex;
   align-items: start;
   justify-content: start;
   flex-direction: column;
   margin-top: -0.5rem;
 }
-main .wrapper section .sub-wrapper .sub-article .wrapper .article-header {
+main section .sub-article .wrapper .article-header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -269,7 +269,7 @@ main .wrapper section .sub-wrapper .sub-article .wrapper .article-header {
   top: 0;
   gap: 1rem;
 }
-main .wrapper section .sub-wrapper .sub-article .wrapper .article-header p {
+main section .sub-article .wrapper .article-header p {
   text-align: center;
   padding: 5px 9px;
   color: #fffdf7;
@@ -277,17 +277,17 @@ main .wrapper section .sub-wrapper .sub-article .wrapper .article-header p {
   font-size: 10px;
   border-radius: 5rem;
 }
-main .wrapper section .sub-wrapper .sub-article .wrapper .article-header small {
+main section .sub-article .wrapper .article-header small {
   font-size: 11px;
 }
-main .wrapper section .sub-wrapper .sub-article .wrapper .article-body {
+main section .sub-article .wrapper .article-body {
   text-align: left;
 }
-main .wrapper section .sub-wrapper .sub-article .wrapper .article-body h2 {
+main section .sub-article .wrapper .article-body h2 {
   max-width: 400px;
   font-size: 22px;
 }
-main .wrapper section .sub-wrapper .sub-article .wrapper .article-footer {
+main section .sub-article .wrapper .article-footer {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -295,7 +295,7 @@ main .wrapper section .sub-wrapper .sub-article .wrapper .article-footer {
   position: absolute;
   bottom: 0;
 }
-main .wrapper section .sub-wrapper .sub-article .wrapper .article-footer img {
+main section .sub-article .wrapper .article-footer img {
   box-shadow: unset;
   border: solid 2px #212529;
   padding: 2px;
@@ -303,16 +303,16 @@ main .wrapper section .sub-wrapper .sub-article .wrapper .article-footer img {
      object-fit: fill;
   border-radius: 5rem;
 }
-main .wrapper section .sub-wrapper .sub-article .wrapper .article-footer div {
+main section .sub-article .wrapper .article-footer div {
   margin-left: 1rem;
   text-align: left;
 }
-main .wrapper section .sub-wrapper .sub-article .wrapper .article-footer div p {
+main section .sub-article .wrapper .article-footer div p {
   font-size: 14px;
   font-weight: 400;
   margin: 0;
 }
-main .wrapper section .sub-wrapper .sub-article .wrapper .article-footer div small {
+main section .sub-article .wrapper .article-footer div small {
   font-size: 12px;
   color: #404243;
 }

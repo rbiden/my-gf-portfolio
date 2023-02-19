@@ -27,80 +27,145 @@
     background-color: $secondary
 }
 
-main {
+.header {
     @include flex(column, center, center);
-    padding-bottom: 4em;
-
-    .wrapper {
-        margin-top: 4rem;
-        text-align: center;
-
-        h6 {
-            font-size: 0.9rem;
-            font-weight: $fw-normal;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    
+    h6 {
+        font-size: 0.9rem;
+        font-weight: $fw-normal;
+    }
+    
+    h1 {
+        margin-top: 1rem;
+        letter-spacing: -0.2rem;
+        font-size: 4rem;
+        font-weight: $fw-normal;
+    }
+    
+    span {
+        position: relative;
+    
+        i {
+            position: absolute;
+            right: 6%;
+            top: 48%;
         }
-        
-        h1 {
-            margin-top: 1rem;
-            letter-spacing: -0.2rem;
-            font-size: 4rem;
-            font-weight: $fw-normal;
+    
+        input {
+            width: 300px;
+            color: $black;
+            background-color: transparent;
+            padding: 1rem 1.5rem;
+            border-radius: 5rem;
+        }
+    }
+    
+    h5 {
+        font-size: 1rem;
+        color: $gray;
+        letter-spacing: 0.05rem;
+        margin-top: 1rem;
+        font-weight: $fw-thin;
+    }
+}
+
+main {
+    @include flex(row, center, center);
+    padding: 2rem 0 4rem 11rem;
+    gap: 1.5rem;
+
+    img {
+        border-radius: 6px;
+    }
+
+    .main-article {
+        @include flex(column, start, center);
+        max-width: 100%;
+        background-color: rgb(250, 249, 249);
+        padding: 15px;
+        border: solid 2px $black;
+        border-radius: 5px;
+
+        div {
+            padding-left: 1rem;
         }
 
-        span {
-            position: relative;
+        .article-header {
+            @include flex(row, center, center);
+            gap: 1rem;
 
-            i {
-                position: absolute;
-                right: 6%;
-                top: 48%;
-            }
-
-            input {
-                width: 300px;
-                color: $black;
-                background-color: transparent;
-                padding: 1rem 1.5rem;
+            p {
+                text-align: center;
+                padding: 5px 9px;
+                color: $white;
+                background-color: $gray;
+                font-size: 10px;
                 border-radius: 5rem;
             }
+
+            small {
+                font-size: 11px;
+            }
         }
 
-        h5 {
-            font-size: 1rem;
-            color: $gray;
-            letter-spacing: 0.05rem;
-            margin-top: 1rem;
-            font-weight: $fw-thin;
+        .article-body {
+            text-align: left;
+
+            h2 {
+                max-width: 380px;
+            }
         }
 
-        section {
+        .article-footer {
             @include flex(row, center, center);
-            gap: 1.5rem;
-            margin-top: 6rem;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
 
-            article {
-                img {
-                    border-radius: 5px;
-                }
+            img {
+                box-shadow: unset;
+                border: solid 2px $black;
+                padding: 2px;
+                object-fit: fill;
+                border-radius: 5rem;
             }
 
-            .main-article {
-                @include flex(column, start, center);
-                max-width: 100%;
-                background-color: rgb(246, 242, 242);
-                padding: 15px;
-                border: solid 2px $black;
-                border-radius: 5px;
-                margin-left: 9%;
+            div {
+                text-align: left;
 
-                div {
-                    padding-left: 1rem;
+                p {
+                    font-size: 14px;
+                    font-weight: $fw-normal;
+                    margin: 0;
                 }
+                small {
+                    font-size: 12px;
+                    color: $gray;
+                }
+            }
+        }
+    }
 
+    section {
+        @include flex(column, center, start);
+        gap: 1.5rem;
+    
+        .sub-article {
+            @include flex(row, center, start);
+            position: relative;
+            gap: 1rem;
+    
+            .wrapper {
+                @include flex(column, start, start);
+                margin-top: -0.5rem;
+    
                 .article-header {
                     @include flex(row, center, center);
+                    position: absolute;
+                    top: 0;
                     gap: 1rem;
-
+    
                     p {
                         text-align: center;
                         padding: 5px 9px;
@@ -109,25 +174,26 @@ main {
                         font-size: 10px;
                         border-radius: 5rem;
                     }
-
+    
                     small {
                         font-size: 11px;
                     }
                 }
-
+    
                 .article-body {
                     text-align: left;
-
+    
                     h2 {
-                        max-width: 380px;
+                        max-width: 400px;
+                        font-size: 22px;
                     }
                 }
-
+    
                 .article-footer {
                     @include flex(row, center, center);
-                    margin-top: 1rem;
-                    margin-bottom: 0.5rem;
-
+                    position: absolute;
+                    bottom: 0;
+    
                     img {
                         box-shadow: unset;
                         border: solid 2px $black;
@@ -135,10 +201,11 @@ main {
                         object-fit: fill;
                         border-radius: 5rem;
                     }
-
+    
                     div {
+                        margin-left: 1rem;
                         text-align: left;
-
+    
                         p {
                             font-size: 14px;
                             font-weight: $fw-normal;
@@ -151,81 +218,7 @@ main {
                     }
                 }
             }
-
-            .sub-wrapper {
-                display: flex;
-                flex-direction: column;
-                gap: 1.5rem;
-
-                .sub-article {
-                    @include flex(row, center, start);
-                    position: relative;
-                    gap: 1rem;
-    
-                    .wrapper {
-                        @include flex(column, start, start);
-                        margin-top: -0.5rem;
-    
-                        .article-header {
-                            @include flex(row, center, center);
-                            position: absolute;
-                            top: 0;
-                            gap: 1rem;
-        
-                            p {
-                                text-align: center;
-                                padding: 5px 9px;
-                                color: $white;
-                                background-color: $gray;
-                                font-size: 10px;
-                                border-radius: 5rem;
-                            }
-        
-                            small {
-                                font-size: 11px;
-                            }
-                        }
-        
-                        .article-body {
-                            text-align: left;
-        
-                            h2 {
-                                max-width: 400px;
-                                font-size: 22px;
-                            }
-                        }
-        
-                        .article-footer {
-                            @include flex(row, center, center);
-                            position: absolute;
-                            bottom: 0;
-        
-                            img {
-                                box-shadow: unset;
-                                border: solid 2px $black;
-                                padding: 2px;
-                                object-fit: fill;
-                                border-radius: 5rem;
-                            }
-        
-                            div {
-                                margin-left: 1rem;
-                                text-align: left;
-        
-                                p {
-                                    font-size: 14px;
-                                    font-weight: $fw-normal;
-                                    margin: 0;
-                                }
-                                small {
-                                    font-size: 12px;
-                                    color: $gray;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
         }
     }
 }
+

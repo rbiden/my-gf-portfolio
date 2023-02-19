@@ -33,13 +33,12 @@ nav {
     }
     
     .nav-addons {
-
         button {
-            background-color: #6e44ff;
-            border: 0;
+            background-color: $secondary;
+            border: solid 1.5px $black;
             font-size: 14px;
             font-weight: $fw-normal;
-            color: $white;
+            color: $black;
             border-radius: 0.5rem;
             padding-block: 0.7rem;
         }

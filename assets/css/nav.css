@@ -8,6 +8,7 @@ body {
   background-color: #fbf4ea;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6, small {
@@ -135,11 +136,11 @@ nav .nav-items ul li a {
   font-size: 14px;
 }
 nav .nav-addons button {
-  background-color: #6e44ff;
-  border: 0;
+  background-color: #d4d7ef;
+  border: solid 1.5px #212529;
   font-size: 14px;
   font-weight: 400;
-  color: #fffdf7;
+  color: #212529;
   border-radius: 0.5rem;
   padding-block: 0.7rem;
 }
