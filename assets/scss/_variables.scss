@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+// Font Weights
+$fw-thin: 300;
+$fw-normal: 400;
+$fw-bold: 600;
+
+// Colors
+$primary: #FBF4EAff;
+$secondary: #d4d7ef;
+$white: #fffdf7;
+$black: #212529;
+$yellow: #f5cb5c;
+$gray: #404243;
+$gray-lighter: #f0eded;
+$font-color: #f8f9fa;
+$gradient: linear-gradient(333deg, #fffed5 0%, #56564a 30%, #000000 60%);
+$valid: #80b918;
+$invalid: #e5383b;
+
+// Shadows
+$nav-shadow: 0px 0px 9px 1px $gray;

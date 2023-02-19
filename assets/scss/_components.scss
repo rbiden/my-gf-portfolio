@@ -1,0 +1,66 @@
+@import './mixins';
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background-color: $primary;
+    font-family: 'Poppins', sans-serif;
+    font-weight: $fw-thin;
+}
+
+h1, h2, h3, h4, h5, h6, small {
+    margin: 0;
+    user-select: none;
+}
+
+button, a {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: $font-color;
+}
+
+ul {
+    margin: 0;
+    padding-left: 0;
+    li {
+    
+        list-style: none;
+    }
+}
+
+button {
+    padding: 0.5rem 1rem;
+    font-weight: $fw-normal;
+    font-size: medium;
+    border: 0;
+    outline: 0;
+}
+
+button:active {
+    scale: 0.99;
+}
+
+button:hover {
+    background-color: darken($color: $secondary, $amount: 15);
+}
+
+input[type='search'], input[type='text'] {
+    position: relative;
+    padding-block: 0.5rem;
+    padding-left: 0.7rem;
+    padding-right: 1rem;
+    background-color: $secondary;
+    border: solid 2px currentColor;
+    border-radius: 0.3rem;
+    font-weight: $fw-normal;
+    outline: 0;
+    color: $primary;
+}
+
+input[type='search']:focus, input[type='text']:focus {
+    outline: 0;
+}

@@ -1,0 +1,47 @@
+@import './customs';
+
+nav {
+    @include flex(row, center, space-between);
+    padding: 1.5rem 5rem;
+
+    .nav-brand {
+        @include flex(row, center, center);
+        h3 {
+            color: $black;
+            font-weight: 400;
+            margin-left: 0.5rem;
+        }
+    }
+
+    .nav-items {
+        @include flex(row, center, start);
+        z-index: 1;
+        ul {
+            @include flex(row, center, center);
+            gap: 3rem;
+
+            li {
+                text-align: center;
+                a {
+                    transition: all 0.5s;
+                    color: $black;
+                    font-weight: $fw-normal;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    
+    .nav-addons {
+
+        button {
+            background-color: #6e44ff;
+            border: 0;
+            font-size: 14px;
+            font-weight: $fw-normal;
+            color: $white;
+            border-radius: 0.5rem;
+            padding-block: 0.7rem;
+        }
+    }
+}

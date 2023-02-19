@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #fbf4ea;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6, small {
+  margin: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+button, a {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: #f8f9fa;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+ul li {
+  list-style: none;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-weight: 400;
+  font-size: medium;
+  border: 0;
+  outline: 0;
+}
+
+button:active {
+  scale: 0.99;
+}
+
+button:hover {
+  background-color: #9ca3da;
+}
+
+input[type=search], input[type=text] {
+  position: relative;
+  padding-block: 0.5rem;
+  padding-left: 0.7rem;
+  padding-right: 1rem;
+  background-color: #d4d7ef;
+  border: solid 2px currentColor;
+  border-radius: 0.3rem;
+  font-weight: 400;
+  outline: 0;
+  color: #fbf4ea;
+}
+
+input[type=search]:focus, input[type=text]:focus {
+  outline: 0;
+}
+
+.floating-group {
+  position: relative;
+  overflow: hidden;
+}
+.floating-group input {
+  text-indent: 1.5rem;
+  margin: 0;
+  font-size: 1rem;
+  width: 90%;
+}
+.floating-group label {
+  position: absolute;
+  font-size: medium;
+  transition: all 0.3s;
+  pointer-events: none;
+  font-weight: 300;
+}
+.floating-group input:focus ~ label, .floating-group input:valid ~ label {
+  transform: translateY(-200%);
+}
+
+.nav-active {
+  padding-bottom: 1rem;
+  border-bottom: solid 1.5px #212529;
+}

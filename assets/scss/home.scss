@@ -1,0 +1,230 @@
+@import './customs';
+
+.bg-smiley {
+    position: absolute;
+    z-index: -1;
+    transform: rotate(15deg);
+    top: 15%;
+    right: -1%;
+
+    img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+.bg-rect {
+    position: absolute;
+    z-index: -1;
+    width: 900px;
+    border-radius: 20rem;
+    color: transparent;
+    border: solid 1.5px $black;
+    transform: rotate(30deg);
+    left: -10%;
+    top: 35%;
+    padding-block: 14rem;
+    background-color: $secondary
+}
+
+main {
+    @include flex(column, center, center);
+
+    .wrapper {
+        margin-top: 4rem;
+        text-align: center;
+
+        h6 {
+            font-size: 0.9rem;
+            font-weight: $fw-normal;
+        }
+        
+        h1 {
+            margin-top: 1rem;
+            letter-spacing: -0.2rem;
+            font-size: 4rem;
+            font-weight: $fw-normal;
+        }
+
+        span {
+            position: relative;
+
+            i {
+                position: absolute;
+                right: 6%;
+                top: 48%;
+            }
+
+            input {
+                width: 300px;
+                color: $black;
+                background-color: transparent;
+                padding: 1rem 1.5rem;
+                border-radius: 5rem;
+            }
+        }
+
+        h5 {
+            font-size: 1rem;
+            color: $gray;
+            letter-spacing: 0.05rem;
+            margin-top: 1rem;
+            font-weight: $fw-thin;
+        }
+
+        section {
+            @include flex(row, center, center);
+            gap: 1.5rem;
+            margin-top: 6rem;
+
+            article {
+                img {
+                    border-radius: 5px;
+                }
+            }
+
+            .main-article {
+                @include flex(column, start, center);
+                max-width: 100%;
+                background-color: rgb(246, 242, 242);
+                padding: 15px;
+                border: solid 2px $black;
+                border-radius: 5px;
+                margin-left: 9%;
+
+                div {
+                    padding-left: 1rem;
+                }
+
+                .article-header {
+                    @include flex(row, center, center);
+                    gap: 1rem;
+
+                    p {
+                        text-align: center;
+                        padding: 5px 9px;
+                        color: $white;
+                        background-color: $gray;
+                        font-size: 10px;
+                        border-radius: 5rem;
+                    }
+
+                    small {
+                        font-size: 11px;
+                    }
+                }
+
+                .article-body {
+                    text-align: left;
+
+                    h2 {
+                        max-width: 380px;
+                    }
+                }
+
+                .article-footer {
+                    @include flex(row, center, center);
+                    margin-top: 1rem;
+                    margin-bottom: 0.5rem;
+
+                    img {
+                        box-shadow: unset;
+                        border: solid 2px $black;
+                        padding: 2px;
+                        object-fit: fill;
+                        border-radius: 5rem;
+                    }
+
+                    div {
+                        text-align: left;
+
+                        p {
+                            font-size: 14px;
+                            font-weight: $fw-normal;
+                            margin: 0;
+                        }
+                        small {
+                            font-size: 12px;
+                            color: $gray;
+                        }
+                    }
+                }
+            }
+
+            .sub-wrapper {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+
+                .sub-article {
+                    @include flex(row, center, start);
+                    position: relative;
+                    gap: 1rem;
+    
+                    .wrapper {
+                        @include flex(column, start, start);
+                        margin-top: -0.5rem;
+    
+                        .article-header {
+                            @include flex(row, center, center);
+                            position: absolute;
+                            top: 0;
+                            gap: 1rem;
+        
+                            p {
+                                text-align: center;
+                                padding: 5px 9px;
+                                color: $white;
+                                background-color: $gray;
+                                font-size: 10px;
+                                border-radius: 5rem;
+                            }
+        
+                            small {
+                                font-size: 11px;
+                            }
+                        }
+        
+                        .article-body {
+                            text-align: left;
+        
+                            h2 {
+                                max-width: 400px;
+                                font-size: 22px;
+                            }
+                        }
+        
+                        .article-footer {
+                            @include flex(row, center, center);
+                            position: absolute;
+                            bottom: 0;
+        
+                            img {
+                                box-shadow: unset;
+                                border: solid 2px $black;
+                                padding: 2px;
+                                object-fit: fill;
+                                border-radius: 5rem;
+                            }
+        
+                            div {
+                                margin-left: 1rem;
+                                text-align: left;
+        
+                                p {
+                                    font-size: 14px;
+                                    font-weight: $fw-normal;
+                                    margin: 0;
+                                }
+                                small {
+                                    font-size: 12px;
+                                    color: $gray;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

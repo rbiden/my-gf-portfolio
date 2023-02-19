@@ -1,0 +1,21 @@
+@import './variables';
+
+@mixin flex($orientation, $align, $justify) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $orientation;
+}
+
+@mixin grid($column, $row) {
+    display: grid;
+    grid-template-columns: 490px 600px;
+    grid-auto-rows: $row;
+}
+
+@mixin center-absolute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
